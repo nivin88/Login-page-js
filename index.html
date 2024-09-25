@@ -1,66 +1,38 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css">
- <body id="body1">
-    <script src="index.js"></script>
-        <div class="container">
-            <form action="">
-                <h1 class="rg">Log in</h1>
-                <div id="input1">
-                    <label type="text" id="user1" name="username">Username</label>
-                    <input for="Name:">
-                </div>
-                <div id="input1">
-                    <label type="text" id="user2" name="username">Email</label>
-                    <input for="username">
-                </div>
-                <div id="input1">
-                    <label type="text" id="user3" name="username">Password</label>
-                    <input for="username">
-                </div>
-                <button class="sub1">Submit</button>
-            </form>
-        </div>
-  
- </body>
- </html> -->
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>javascript validation</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Kanit:wght@500&family=Montserrat:ital,wght@0,200;0,300;0,900;1,100;1,300&family=Mulish:wght@300;500&family=Newsreader:opsz,wght@6..72,600&family=Roboto:ital,wght@0,100;0,300;0,500;1,100&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <script src="index.js"></script>
-    <div>
-      <form id="form1">
-        <h1>Log in</h1>
-        <div class="labeldiv">
-          <label for="">Name:</label>
-          <input type="text" placeholder="Name" id="username" name="username" />
+    <div class="container">
+      <form action="" id="mymethodform">
+        <h1 class="rg bg-danger">Log in</h1>
+        <div id="input1">
+          <label for="">Name</label>
+          <input type="text" placeholder="Name" class="user1" name="username" id="username">
           <span id="nameerrormsg"></span>
-        </div><br>
-        <div class="labeldiv">
-          <label for="">Password:</label>
-          <input
-            type="password"
-            placeholder="Password"
-            id="password"
-            name="password"
-          />
+        </div>
+        <br>
+        <div id="input1">
+          <label for="">Email</label>
+          <input type="text" placeholder="Email" class="user1" name="Email" id="Email">
+          <span id="Emailerrormsg"></span>
+        </div>
+        <br>
+        <div id="input1">
+          <label for="">Password</label>
+          <input type="text" placeholder="Password" class="user1" name="password" id="password">
           <span id="passworderrormsg"></span>
         </div>
-        <br />
-        <button id="submit" type="submit">Log in</button>
+        <br>
+        <button id="submit1"  type="submit">Submit</button>
       </form>
     </div>
+    <script src="index.js"></script>
   </body>
-</html>
+  </html>
+
+ 
