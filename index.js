@@ -11,14 +11,17 @@ form.addEventListener('submit',(event) => {
  
   if( userName.value !==  ""){
     nameError.innerHTML = '';
+    console.log(userName.value)
   };
   
-  if(Email.value !==  ""){
+  if( Email.value !==  ""){
     EmailError.innerHTML = '';
+    console.log(Email.value)
   };
 
-  if(password.value !== ""){
+  if( password.value !== ""){
     passwordError.innerHTML = '';
+    console.log(password.value)
   }
   
   if( userName.value ===  ""){
@@ -26,15 +29,14 @@ form.addEventListener('submit',(event) => {
     nameError.style.color = '#2def0fdf';
    };
    
-   if(Email.value === ""){
+   if( Email.value === ""){
     EmailError . innerHTML='Email is required*';
     EmailError.style.color = '#2def0fdf';
     };
     
-    if(password.value === "") { 
+    if( password.value === "") { 
     passwordError.innerHTML='Password is required*';
     passwordError.style.color = '#2def0fdf';
     };
-
 });
 
