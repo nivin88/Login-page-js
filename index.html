@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="container">
-      <form action="" id="mymethodform">
+      <form action="" onsubmit="mysubmit(event)" id="mymethodform">
         <h1 class="rg bg-danger">Log in</h1>
         <div id="input1">
           <label for="">Name</label>
@@ -30,6 +29,17 @@
         <br>
         <button id="submit1" type="submit">Submit</button>
       </form>
+    <div id="table2">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
     </div>
     <script src="index.js"></script>
   </body>
