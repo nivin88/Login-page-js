@@ -1,65 +1,58 @@
-const form = document.getElementById('mymethodform');
-let userName = document.getElementById('username');
-let Email = document.getElementById('Email');
-let password = document.getElementById('password'); 
-let nameError = document.getElementById('nameerrormsg');
-let EmailError = document.getElementById('Emailerrormsg');
-let passwordError = document.getElementById('passworderrormsg');
-
-
-
-function mysubmit(event){
+function mySubmit(event) {
   event.preventDefault();
-  let submitsuccess=[]
-  const userName=document.getElementById('username').value
-  const Email=document.getElementById('Email').value
-  const password=document.getElementById('password').value
 
-  let uservalue=[{userName,Email,password}];
-  submitsuccess.push(uservalue)
-  console.log(submitsuccess)
-}
+  let user = [];
+  const userName = document.getElementById('username').value;
+  const email = document.getElementById('email').value; // Corrected 'Email' id
+  const password = document.getElementById('password').value;
 
+  const nameError = document.getElementById('nameerrormsg');
+  const emailError = document.getElementById('Emailerrormsg'); // Matching with HTML
+  const passwordError = document.getElementById('passworderrormsg');
 
-
-form.addEventListener('submit',(event) => {
-  event.preventDefault();
-  
-
-  if( userName.value !==  ""){
+  if (userName === "") {
+    nameError.innerHTML = 'Name is required*';
+    nameError.style.color = 'red';
+  } else {
     nameError.innerHTML = '';
-    // console.log(userName.value)
-  };
-  
-  if( Email.value !==  ""){
-    EmailError.innerHTML = '';
-    // console.log(Email.value)
-  };
-
-  if( password.value !== ""){
-    passwordError.innerHTML = '';
-    // console.log(password.value)
+ 
   }
-  
-  if( userName.value ===  ""){
-    nameError.innerHTML = 'Name is required*'; 
-    nameError.style.color = '#2def0fdf';
-   };  
-  
-   if( Email.value === ""){
-    EmailError . innerHTML='Email is required*';
-    EmailError.style.color = '#2def0fdf';
-    };
-    
-    if( password.value === "") { 
-    passwordError.innerHTML='Password is required*';
-    passwordError.style.color = '#2def0fdf';
-    };
+
+  if (email === "") {
+    emailError.innerHTML = 'Email is required*';
+    emailError.style.color = 'red';
+  } else {
+    emailError.innerHTML = '';
+
+  }
+
+  if (password === "") {
+    passwordError.innerHTML = 'Password is required*';
+    passwordError.style.color = 'red';
+  } else {
+    passwordError.innerHTML = '';
+ 
+  }
+
+  if (userName === "" || email === "" || password === "") {
+    return;
+  }
+
+  let newUser = { userName, email, password };
+  user.push(newUser);
+  console.log(user);
+
+  let tableBody =document.getElementById('tableby');
+  let row =`<tr>
+              <td>${userName}</td>
+              <td>${email}</td>
+              <td>${password}</td>`;
+
+   tableBody.innerHTML += row;
 
 
-
-    document.getElementById('username').value = "";
-    document.getElementById('Email').value = "";
-    document.getElementById('password').value = "";
-
-});
+  // Clear input fields after submission
+  document.getElementById('username').value = "";
+  document.getElementById('email').value = "";
+  document.getElementById('password').value = "";
+}

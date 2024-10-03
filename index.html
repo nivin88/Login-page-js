@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-      <form action="" onsubmit="mysubmit(event)" id="mymethodform">
-        <h1 class="rg bg-danger">Log in</h1>
-        <div id="input1">
-          <label for="">Name</label>
-          <input type="text" placeholder="Name" class="user1" name="username" id="username">
-          <span id="nameerrormsg"></span>
-        </div>
-        <br>
-        <div id="input1">
-          <label for="">Email</label>
-          <input type="text" placeholder="Email" class="user1" name="Email" id="Email">
-          <span id="Emailerrormsg"></span>
-        </div>
-        <br>
-        <div id="input1">
-          <label for="">Password</label>
-          <input type="text" placeholder="Password" class="user1" name="password" id="password">
-          <span id="passworderrormsg"></span>
-        </div>
-        <br>
-        <button id="submit1" type="submit">Submit</button>
-      </form>
-    <div id="table2">
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Password</th>
-          </tr>
-        </thead>
-        <tbody id="tbody"></tbody>
-      </table>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="" onsubmit="mySubmit(event)" id="mymethodform">
+    <h1 class="rg bg-danger">Log in</h1>
+    <div id="input1">
+      <label for="username">Name</label>
+      <input type="text" placeholder="Name" class="user1" name="username" id="username">
+      <span id="nameerrormsg"></span>
     </div>
-    <script src="index.js"></script>
-  </body>
-  </html>
+    <br>
+    <div id="input1">
+      <label for="Email">Email</label>
+      <input type="text" placeholder="Email" class="user1" name="email" id="email">
+      <span id="Emailerrormsg"></span>
+    </div>
+    <br>
+    <div id="input1">
+      <label for="password">Password</label>
+      <input type="text" placeholder="Password" class="user1" name="password" id="password">
+      <span id="passworderrormsg"></span>
+    </div>
+    <br>
+    <button id="submit1" type="submit">Submit</button>
+  </form>
 
-  
+  <div id="table2">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody id="tableby"></tbody>
+    </table>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

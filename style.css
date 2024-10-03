@@ -88,3 +88,23 @@
   td{
     text-align: center;
   }
+
+  /* @media only screen and (max-width:321px) {
+    form{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 80px;
+      width: 130px;
+      height: 200px;
+    }
+    #table2{
+      display: grid;
+      justify-content: center;
+      width: 150px;
+      margin-left: 100px;
+
+
+    }
+    
+  } */
