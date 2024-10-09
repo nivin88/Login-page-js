@@ -43,13 +43,16 @@ function mySubmit(event) {
   console.log(user);
 
   let tableBody =document.getElementById('tableby');
+  
   let row =`<tr>
               <td>${userName}</td>
               <td>${email}</td>
-              <td>${password}</td>`;
+              <td>${password}</td>
+              <td><button>edit</button> <button>Delete</button></td>
+              </tr>`;             
+            
 
    tableBody.innerHTML += row;
-
 
   // Clear input fields after submission
   document.getElementById('username').value = "";
